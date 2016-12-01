@@ -10,7 +10,7 @@ canvas.height = canvas.element.getAttribute('height');
 canvas.cellWidth = 10;
 
 canvas.redraw = function(fillColour, strokeColour) {
-  var fillColour = fillColour || 'magenta',
+  var fillColour = fillColour || 'fuchsia',
     strokeColour = strokeColour || 'white';
 
   this.paint(0, 0, fillColour, strokeColour, this.width, this.height);
