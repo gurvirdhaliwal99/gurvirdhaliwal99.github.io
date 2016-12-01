@@ -154,7 +154,7 @@ function Food() {
     }
   };
   this.draw = function() {
-    canvas.paint(this.x, this.y, 'lime');
+    canvas.paint(this.x, this.y, 'fuchsia');
   };
 
   this.generateCoords();
@@ -181,7 +181,7 @@ game.runLoop = function() {
   }, 1000 / game.fps);
 };
 game.start = function() {
-  mainSnake = new Snake(10, 'lime', 'white', {
+  mainSnake = new Snake(10, 'fuchsia', 'white', {
     x: 5,
     y: 5
   });
