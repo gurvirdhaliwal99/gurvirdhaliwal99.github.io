@@ -7,7 +7,7 @@ canvas.element = document.getElementById('canvas');
 canvas.context = canvas.element.getContext('2d');
 canvas.width = canvas.element.getAttribute('width');
 canvas.height = canvas.element.getAttribute('height');
-canvas.cellWidth = 20;
+canvas.cellWidth = 30;
 
 canvas.redraw = function(fillColour, strokeColour) {
   var fillColour = fillColour || 'black',
