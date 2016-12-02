@@ -11,7 +11,7 @@ canvas.cellWidth = 10;
 
 canvas.redraw = function(fillColour, strokeColour) {
   var fillColour = fillColour || 'lime',
-    strokeColour = strokeColour || 'white';
+    strokeColour = strokeColour || 'black';
 
   this.paint(0, 0, fillColour, strokeColour, this.width, this.height);
 }
@@ -20,7 +20,7 @@ canvas.paint = function(x, y, fillColour, strokeColour, width, height) {
   var width = width || this.cellWidth,
     height = height || this.cellWidth,
     fillColour = fillColour || "fuchsia"
-  strokeColour = strokeColour || 'white';
+  strokeColour = strokeColour || 'black';
 
   this.context.fillStyle = fillColour;
   this.context.fillRect(x * canvas.cellWidth, y * canvas.cellWidth, width, height);
