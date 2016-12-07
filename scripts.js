@@ -89,6 +89,7 @@ Snake.prototype.move = function() {
 
   if (this.eatingFood()) {
     game.score++;
+    game.fps++;
     tail = {
       x: this.nx,
       y: this.ny
@@ -164,7 +165,7 @@ function Food() {
 }
 
 var game = new Object();
-game.fps = 20;
+game.fps = 15;
 game.score = 0;
 game.scoreText = 'Score: ';
 game.drawScore = function() {
