@@ -182,7 +182,7 @@ game.runLoop = function() {
   }, 1000 / game.fps);
 };
 game.start = function() {
-  mainSnake = new Snake(10, 'fuchsia', 'black', {
+  mainSnake = new Snake(1, 'fuchsia', 'black', {
     x: 5,
     y: 5
   });
