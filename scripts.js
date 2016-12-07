@@ -2,7 +2,6 @@ var canvas = new Object();
 var mainSnake;
 var food;
 
-
 canvas.element = document.getElementById('canvas');
 canvas.context = canvas.element.getContext('2d');
 canvas.width = canvas.element.getAttribute('width');
@@ -89,7 +88,7 @@ Snake.prototype.move = function() {
 
   if (this.eatingFood()) {
     game.score++;
-    game.fps++;
+    game.fps ++;
     tail = {
       x: this.nx,
       y: this.ny
@@ -164,6 +163,8 @@ function Food() {
 
 }
 
+
+
 var game = new Object();
 game.fps = 15;
 game.score = 0;
@@ -177,7 +178,7 @@ game.runLoop = function() {
     mainSnake.move();
     if (typeof food.draw != 'undefined') {
       food.draw();
-    }
+    }  
     game.drawScore();
   }, 1000 / game.fps);
 };
@@ -188,12 +189,12 @@ game.start = function() {
   });
   food = new Food();
   game.score = 0;
+  game.fps = 10;
 };
 game.over = function() {
   canvas.redraw();
   this.start();
 };
-
 game.start();
 game.runLoop();
 
