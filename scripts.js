@@ -89,6 +89,8 @@ Snake.prototype.move = function() {
   if (this.eatingFood()) {
     game.score++;
     game.fps ++;
+    canvas.height ++;
+    canvas.width ++;
     tail = {
       x: this.nx,
       y: this.ny
