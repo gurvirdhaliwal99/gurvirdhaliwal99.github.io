@@ -10,8 +10,8 @@ canvas.height = canvas.element.getAttribute('height');
 canvas.cellWidth = 10;
 
 canvas.redraw = function(fillColour, strokeColour) {
-  var fillColour = fillColour || 'black',
-    strokeColour = strokeColour || 'white';
+  var fillColour = fillColour || 'lime',
+    strokeColour = strokeColour || 'black';
 
   this.paint(0, 0, fillColour, strokeColour, this.width, this.height);
 }
@@ -19,8 +19,8 @@ canvas.redraw = function(fillColour, strokeColour) {
 canvas.paint = function(x, y, fillColour, strokeColour, width, height) {
   var width = width || this.cellWidth,
     height = height || this.cellWidth,
-    fillColour = fillColour || "lime"
-  strokeColour = strokeColour || 'white';
+    fillColour = fillColour || "fuchsia"
+  strokeColour = strokeColour || 'black';
 
   this.context.fillStyle = fillColour;
   this.context.fillRect(x * canvas.cellWidth, y * canvas.cellWidth, width, height);
@@ -182,7 +182,7 @@ game.runLoop = function() {
   }, 1000 / game.fps);
 };
 game.start = function() {
-  mainSnake = new Snake(10, 'lime', 'white', {
+  mainSnake = new Snake(10, 'fuchsia', 'black', {
     x: 5,
     y: 5
   });
