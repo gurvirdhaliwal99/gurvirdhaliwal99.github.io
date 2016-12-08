@@ -2,6 +2,7 @@ var canvas = new Object();
 var mainSnake;
 var food;
 
+
 canvas.element = document.getElementById('canvas');
 canvas.context = canvas.element.getContext('2d');
 canvas.width = canvas.element.getAttribute('width');
@@ -9,8 +10,8 @@ canvas.height = canvas.element.getAttribute('height');
 canvas.cellWidth = 10;
 
 canvas.redraw = function(fillColour, strokeColour) {
-  var fillColour = fillColour || 'lime',
-    strokeColour = strokeColour || 'black';
+  var fillColour = fillColour || 'black',
+    strokeColour = strokeColour || 'white';
 
   this.paint(0, 0, fillColour, strokeColour, this.width, this.height);
 }
@@ -18,8 +19,8 @@ canvas.redraw = function(fillColour, strokeColour) {
 canvas.paint = function(x, y, fillColour, strokeColour, width, height) {
   var width = width || this.cellWidth,
     height = height || this.cellWidth,
-    fillColour = fillColour || "fuchsia"
-  strokeColour = strokeColour || 'black';
+    fillColour = fillColour || "lime"
+  strokeColour = strokeColour || 'white';
 
   this.context.fillStyle = fillColour;
   this.context.fillRect(x * canvas.cellWidth, y * canvas.cellWidth, width, height);
@@ -88,7 +89,7 @@ Snake.prototype.move = function() {
 
   if (this.eatingFood()) {
     game.score++;
-    game.fps ++;
+    game.fps++;
     tail = {
       x: this.nx,
       y: this.ny
@@ -154,7 +155,7 @@ function Food() {
     }
   };
   this.draw = function() {
-    canvas.paint(this.x, this.y, 'fuchsia');
+    canvas.paint(this.x, this.y, 'lime');
   };
 
   this.generateCoords();
@@ -163,10 +164,8 @@ function Food() {
 
 }
 
-
-
 var game = new Object();
-game.fps = 15;
+game.fps = 20;
 game.score = 0;
 game.scoreText = 'Score: ';
 game.drawScore = function() {
@@ -178,23 +177,23 @@ game.runLoop = function() {
     mainSnake.move();
     if (typeof food.draw != 'undefined') {
       food.draw();
-    }  
+    }
     game.drawScore();
   }, 1000 / game.fps);
 };
 game.start = function() {
-  mainSnake = new Snake(1, 'fuchsia', 'black', {
+  mainSnake = new Snake(10, 'lime', 'white', {
     x: 5,
     y: 5
   });
   food = new Food();
   game.score = 0;
-  game.fps = 10;
 };
 game.over = function() {
   canvas.redraw();
   this.start();
 };
+
 game.start();
 game.runLoop();
 
