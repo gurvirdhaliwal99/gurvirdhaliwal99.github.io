@@ -29,7 +29,8 @@ canvas.paint = function(x, y, fillColour, strokeColour, width, height) {
 };
 
 canvas.paintText = function(text, x, y) {
-  var fillColour = fillColour
+  var fillColour = "fuchsia";
+  var strokeColour = "black";
   var x = x || 5,
     y = y || 15;
   this.context.fillText(text, x, y);
@@ -156,7 +157,7 @@ function Food() {
     }
   };
   this.draw = function() {
-    canvas.paint(this.x, this.y, 'cyan');
+    canvas.paint(this.x, this.y, 'cyan', 'black');
   };
 
   this.generateCoords();
