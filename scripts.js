@@ -157,7 +157,7 @@ function Food() {
     }
   };
   this.draw = function() {
-    canvas.paint(this.x, this.y, 'cyan', 'black');
+    canvas.paint(this.x, this.y, 'DeepSkyBlue', 'black');
   };
 
   this.generateCoords();
