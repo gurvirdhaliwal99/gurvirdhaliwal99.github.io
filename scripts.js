@@ -29,6 +29,7 @@ canvas.paint = function(x, y, fillColour, strokeColour, width, height) {
 };
 
 canvas.paintText = function(text, x, y) {
+   var fillColour = fillColour
   var x = x || 5,
     y = y || 15;
   this.context.fillText(text, x, y);
