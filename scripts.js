@@ -10,7 +10,7 @@ canvas.height = canvas.element.getAttribute('height');
 canvas.cellWidth = 10;
 
 canvas.redraw = function(fillColour, strokeColour) {
-  var fillColour = fillColour || 'fuchsia',
+  var fillColour = fillColour || 'lime',
     strokeColour = strokeColour || 'black';
 
   this.paint(0, 0, fillColour, strokeColour, this.width, this.height);
@@ -19,7 +19,7 @@ canvas.redraw = function(fillColour, strokeColour) {
 canvas.paint = function(x, y, fillColour, strokeColour, width, height) {
   var width = width || this.cellWidth,
     height = height || this.cellWidth,
-    fillColour = fillColour || "fuchsia"
+    fillColour = fillColour || "lime"
   strokeColour = strokeColour || 'black';
 
   this.context.fillStyle = fillColour;
@@ -29,7 +29,7 @@ canvas.paint = function(x, y, fillColour, strokeColour, width, height) {
 };
 
 canvas.paintText = function(text, x, y) {
-   var fillColour = fillColour
+  var fillColour = fillColour
   var x = x || 5,
     y = y || 15;
   this.context.fillText(text, x, y);
@@ -156,7 +156,7 @@ function Food() {
     }
   };
   this.draw = function() {
-    canvas.paint(this.x, this.y, 'lime');
+    canvas.paint(this.x, this.y, 'fuchsia');
   };
 
   this.generateCoords();
@@ -166,7 +166,7 @@ function Food() {
 }
 
 var game = new Object();
-game.fps = 20;
+game.fps = 15;
 game.score = 0;
 game.scoreText = 'Score: ';
 game.drawScore = function() {
@@ -189,6 +189,7 @@ game.start = function() {
   });
   food = new Food();
   game.score = 0;
+  game.fps = 15;
 };
 game.over = function() {
   canvas.redraw();
