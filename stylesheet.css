@@ -1,0 +1,217 @@
+html, body{
+    margin: 0;
+    background-color: black;
+
+}
+
+#main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#title{
+    flex: 1;
+}
+
+#basics1{
+    flex: 1;
+}
+
+#basics2{
+    flex: 1;
+}
+
+#info4{
+    flex: 1;
+    display: none;
+}
+
+#info5{
+    flex: 1;
+    display: none;
+}
+
+#info6{
+    flex: 1;
+    display: none;
+}
+
+#info7{
+    flex: 1;
+    display: none;
+}
+
+#info8{
+    flex: 1;
+    display: none;
+}
+
+#info9{
+    flex: 1;
+    display: none;
+}
+
+#info10{
+    flex: 1;
+    display: none;
+}
+
+#info11{
+    flex: 1;
+    display: none;
+}
+
+#info2{
+    flex: 1;
+    margin-top: 70px;
+}
+
+#info3{
+    flex: 1;
+    margin-top: 70px;
+}
+
+#space{
+    flex: 1;
+    margin-top: 70px;
+    background-color: white;
+    width: 10vw;
+    height: 10px;
+}
+
+#verbal1{
+    flex: 1;
+}
+
+#physical1{
+    flex: 1;
+}
+
+#physical1{
+    flex: 1;
+}
+
+#cyber{
+    flex: 1;
+}
+
+.firstpic{
+    display: none;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+}
+
+.firstp{
+    display: none;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.secondpic{
+    display: none;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+}
+
+.secondp{
+    display: none;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    line-height: 90px;
+}
+
+.secondp2{
+    display: none;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    line-height: 90px;
+}
+
+.thirdpic{
+    display: none;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+}
+
+.thirdp{
+    display: none;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.fourpic{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+}
+
+.fivepic{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+    padding-top: 50px;
+}
+
+/*animation*/
+
+
+.fivepic {
+    position: relative;
+    animation: flag 5s infinite;
+}
+
+@keyframes flag {
+    0% {left: 0px;}
+    25% {left:400px;}
+    75% {left: -400px;}
+    100% {left: 100px;}
+}
+
+
+.secondpic {
+    animation: tiltpie 5s infinite;
+}
+
+@keyframes tiltpie {
+    0% {transform: rotate(3deg);}
+    25% {transform: rotate(-3deg);}
+    50% {transform: rotate(3deg);}
+    75% {transform: rotate(-3deg);}
+    100% {transform: rotate(3deg);}
+} 
+
+
+.fifthp{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    padding-top: 50px;
+}
